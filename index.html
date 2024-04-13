@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Főoldal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body onload="kos()">
+    <script src="./script.js"></script>
+    <div class="navbar">
+        <div class="logo">
+            <img src="./assets/bolt.svg" alt="">
+            <h1>220 Shop</h1>
+        </div>
+
+        <div class="nav-list">
+            <ul>
+                <li><a href="./webshop/index.html">Webáruház</a></li>
+                <li><a href="./rolunk/index.html">Rólunk</a></li>
+                <li><a href="./kapcsolatok/kapcsolatok.html">Kapcsolat</a></li>
+                <img id="myBtn" src="./assets/shopping-cart.svg">
+                <img onclick="window.open('./bejelentkezés/index.html')" src="./assets/user.svg">
+            </ul>
+        </div>
+    </div>
+    <div class="landing">
+        <h1>Üdvözlünk az oldalunkon!</h1>
+    </div>
+    <div class="title">
+        <h1>Top termékeink</h1>
+    </div>
+    <div class="top-products">
+        <div class="product-card">
+            <div class="product-tumb">
+                <img src="https://szerszamsziget.cdn.shoprenter.hu/custom/szerszamsziget/image/cache/w500h500wt1/product/YT-28630.jpg?lastmod=1708340916.1666178229" alt="">
+            </div>
+            <div class="product-details">
+                <h4><a href="">Yato Digitális Voltmérő</a></h4>
+                <p>
+                    Váltakozó feszültség a 12-250 V tartományban és a frekvencia 50-500 Hz</p>
+                <div class="product-bottom-details">
+                    <div class="product-price">1100 Ft</div>
+                    <div class="product-links">
+                        <img class="addToCart" onclick="hozzáad('Yato_Digitális_Voltmérő')" src="./assets/shopping-cart.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-tumb">
+                <img src="https://szerszamsziget.cdn.shoprenter.hu/custom/szerszamsziget/image/cache/w500h500wt1/product/YT-2864.jpg?lastmod=1710273487.1666178229" alt="">
+            </div>
+            <div class="product-details">
+                <h4><a href="">Yato LED-es fáziskereső ceruza</a></h4>
+                <p>
+                    Frekvencia [Hz]	50-500
+                    Feszültségtartomány [V]	70-250 / 70-600
+                    Méret [mm]	215</p>
+                <div class="product-bottom-details">
+                    <div class="product-price">760 Ft</div>
+                    <div class="product-links">
+                        <img class="addToCart" onclick="hozzáad('Yato_LED_fázisceruza')" src="./assets/shopping-cart.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+      <div class="container1">
+        <div class="table">
+            <table class="tabla">
+                <h1 onclick="kos()">Kosár</h1>
+        <table id="tabla">
+          <tbody>
+            <!--<tr style="font-size: 25px;">
+              <th style="width: 450px;">Termék</th>
+              <th style="width: 450px;">Mennyiség</th>
+              <th style="width: 450px;">Ár</th>
+            </tr>
+            <tr style="font-size: 20px;">
+              <th style="width: 450px;">Fizetendő</th>
+              <th style="width: 450px;"> </th>
+              <th style="width: 450px;">0 Ft</th>
+            </tr>-->
+          </tbody>
+        </table>
+        <div class="torles"><button class="fizet"><a style="text-decoration: none; color: white;" href="./fizet.html">Tovább a fizetéshez</a></button><button class="törlés" onclick="torles()">Kosár ürítése</button></div>          
+        </div>
+        
+        
+        </div>
+        
+        </div>
+      
+      </div>
+      <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>   
+</body>
+</html>

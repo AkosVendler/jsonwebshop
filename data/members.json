@@ -1,0 +1,18 @@
+[
+  {
+    "id": "e01d085c-99cf-4dae-88d0-74f06a045545",
+    "firstname": "Admin",
+    "lastname": "Admin",
+    "password": "Admin123",
+    "email": "admin@gmail.com",
+    "role": "admin"
+  },
+  {
+    "id": "d52c98c9-2127-4696-ac61-746e0362c8f7",
+    "firstname": "Kiss",
+    "lastname": "Bela",
+    "password": "belavagyok",
+    "email": "kissbelagmail.com",
+    "role": "user"
+  }
+]

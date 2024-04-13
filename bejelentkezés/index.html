@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Bejelentkezés</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="../app.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="../assets/bolt.svg">
+            <h1 onclick="window.open('../index.html','_self')">220 Shop</h1>
+        </div>
+
+        <div class="nav-list">
+            <ul>
+                <li><a href="../webshop/index.html">Webáruház</a></li>
+                <li><a href="../rolunk/index.html">Rólunk</a></li>
+                <li><a href="./kapcsolatok/kapcsolatok.html">Kapcsolat</a></li>
+                <img id="myBtn" src="../assets/shopping-cart.svg">
+                <img onclick="window.open('./bejelentkezés/index.html')" src="../assets/user.svg">
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="kep"> <img src="images.png" height="400" width="400" /></div>
+
+    <div class="husi">
+        <form id="form">
+            <h1>Jelentkezz be!</h1>
+            <div class="cola">
+                <input type="text" id="email" placeholder="Felhasználónév" required />
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="cola">
+                <input type="password" id="password" placeholder="Jelszó" required />
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="kaja">
+                <label><input type="checkbox"> Jegyezd meg </label>
+                <a href="../nincs.html">Elfelejtetted a jelszót?</a>
+            </div>
+
+            <button type="submit" class="btn">Bejelentkezés</button>
+
+            <div class="fanta">
+                <p>Nincs fiókja? <a href="#"> Regisztrálj</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="kep"><img src="images.png" height="400" width="400"/> </div>
+    </div>
+    <script src="../fetch.js"></script>
+</body>
+</html>

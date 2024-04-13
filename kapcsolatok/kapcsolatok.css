@@ -1,0 +1,149 @@
+﻿:root {
+    --white: #fbfaf8;
+    --black: #1C2321;
+    --orange: #FF8811;
+}
+
+
+body {
+    margin: 0;
+    background: var(--white);
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.logo img {
+    width: 5%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    font-weight: 700;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--orange);
+    width: 100%;
+    height: 15vh;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+
+.nav-list ul {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    cursor: pointer;
+}
+
+.nav-list ul li {
+    list-style: none;
+}
+
+.nav-list ul li a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 20px;
+}
+
+.nav-list  img {
+    width: 5%;
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    background-color: #fbfaf8;
+}
+
+
+h2{
+    font-size: 40px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    text-align:left;
+    padding-top:130px;
+    margin-left:80px;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+.igen{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Vezeték{
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    gap:20px;
+}
+
+.Vezetéknév h2{
+    font-weight: 600;
+    color: #FF8811;
+    font-size:40px;
+    margin-bottom:5px;
+}
+
+.Vezetéknév hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #FF8811;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.kontaktok {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: 1px solid black;
+    padding-left: 25px;
+    font-weight: 500;
+    color: black;
+    border-radius: 50px;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.Vezeték textarea {
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.kontaktok:focus{
+    border: 2px solid black;
+}
+
+.kontaktok::placeholder{
+    color:black;
+}
+
+.Vezeték button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: white;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(#fbfaf8,#FF8811);
+    cursor:pointer;
+}
