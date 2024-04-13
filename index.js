@@ -22,27 +22,27 @@ app.get("/", (req, res) => {
 });
 
 // Read
-app.get("https://akosvendler.github.io/jsonwebshop//products", (req, res) => {
+app.get("/products", (req, res) => {
   fs.readFile("./data/products.json", (err, file) => {
     res.send(JSON.parse(file));
   });
 });
 // Read members
-app.get("https://akosvendler.github.io/jsonwebshop//members", (req, res) => {
+app.get("/members", (req, res) => {
   fs.readFile("./data/members.json", (err, file) => {
     res.send(JSON.parse(file));
   });
 });
 
 // Read order
-app.get("https://akosvendler.github.io/jsonwebshop//orders", (req, res) => {
+app.get("/orders", (req, res) => {
   fs.readFile("./data/orders.json", (err, file) => {
     res.send(JSON.parse(file));
   });
 });
 
 // Read by id
-app.get("https://akosvendler.github.io/jsonwebshop//products/:egyediAzonosito", (req, res) => {
+app.get("/products/:egyediAzonosito", (req, res) => {
   const id = req.params.egyediAzonosito;
 
   fs.readFile("./data/products.json", (err, file) => {
@@ -60,7 +60,7 @@ app.get("https://akosvendler.github.io/jsonwebshop//products/:egyediAzonosito", 
 });
 
 // Create
-app.post("https://akosvendler.github.io/jsonwebshop//products", bodyParser.json(), (req, res) => {
+app.post("/products", bodyParser.json(), (req, res) => {
   const newProduct = {
     id: uuidv4(),
     productname: sanitizeString(req.body.productname),
@@ -79,7 +79,7 @@ app.post("https://akosvendler.github.io/jsonwebshop//products", bodyParser.json(
 });
 
 // Create user
-app.post("https://akosvendler.github.io/jsonwebshop//members", bodyParser.json(), (req, res) => {
+app.post("/members", bodyParser.json(), (req, res) => {
   const newMember = {
     id: uuidv4(),
     firstname: sanitizeString(req.body.firstname),
@@ -99,7 +99,7 @@ app.post("https://akosvendler.github.io/jsonwebshop//members", bodyParser.json()
 });
 
 // Create user
-app.post("https://akosvendler.github.io/jsonwebshop/orders", bodyParser.json(), (req, res) => {
+app.post("/orders", bodyParser.json(), (req, res) => {
   const newOrder = {
     id: uuidv4(),
     products: sanitizeString(req.body.products),
@@ -118,7 +118,7 @@ app.post("https://akosvendler.github.io/jsonwebshop/orders", bodyParser.json(), 
 });
 
 // Update
-app.put("https://akosvendler.github.io/jsonwebshop//products/:egyediAzonosito", bodyParser.json(), (req, res) => {
+app.put("/products/:egyediAzonosito", bodyParser.json(), (req, res) => {
   const id = req.params.egyediAzonosito;
 
   fs.readFile("./data/products.json", (err, file) => {
@@ -147,7 +147,7 @@ app.put("https://akosvendler.github.io/jsonwebshop//products/:egyediAzonosito", 
 });
 
 // Delete
-app.delete("https://akosvendler.github.io/jsonwebshop//products/:egyediAzonosito", (req, res) => {
+app.delete("/products/:egyediAzonosito", (req, res) => {
   const id = req.params.egyediAzonosito;
 
   fs.readFile("./data/products.json", (err, file) => {
